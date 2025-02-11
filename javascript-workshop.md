@@ -90,34 +90,32 @@ JavaScript สามารถเพิ่มลงในเว็บเพจไ
     <!-- ช่องกรอกข้อความ -->
     <input type="text" id="messageInput" placeholder="กรอกข้อความ">
     <button onclick="showMessage()">แสดงข้อความ</button>
-
     <p id="displayMessage"></p>
 
     <!-- Internal JavaScript -->
     <script>
-        // ปุ่มที่ 2: แสดงวันที่ปัจจุบัน
-        document.getElementById('btn2').onclick = function() {
-            var currentDate = new Date();
-            alert('วันที่ปัจจุบัน: ' + currentDate.toLocaleDateString());
+        // Internal JavaScript สำหรับปุ่มที่ 2 แสดงวันที่
+        document.getElementById("btn2").onclick = function() {
+          alert("วันที่ปัจจุบัน: " + new Date().toLocaleDateString());
         };
-
-        // ฟังก์ชันแสดงข้อความที่กรอก
-        function showMessage() {
-            var message = document.getElementById('messageInput').value;
-            document.getElementById('displayMessage').innerText = "ข้อความที่กรอก: " + message;
+      
+        // ฟังก์ชันแสดงเวลาปัจจุบัน
+        function showTime() {
+          alert("เวลาปัจจุบัน: " + new Date().toLocaleTimeString());
         }
-        // ปุ่มที่ 3: แสดงเวลาปัจจุบัน
-function showTime() {
-    var currentTime = new Date();
-    alert('เวลาปัจจุบัน: ' + currentTime.toLocaleTimeString());
-}
-
-    </script>
+      
+        // ฟังก์ชันแสดงข้อความจากช่องกรอกข้อความ
+        function showMessage() {
+          var message = document.getElementById("messageInput").value;
+          alert(message); // แสดงข้อความใน alert
+        }
+      </script>
 
     <!-- External JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
+
 ]
 ```
 [รูปผลการทดลองที่ 1]
