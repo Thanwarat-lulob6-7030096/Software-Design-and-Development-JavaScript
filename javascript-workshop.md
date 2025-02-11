@@ -71,9 +71,58 @@ JavaScript สามารถเพิ่มลงในเว็บเพจไ
    - มีปุ่มเมื่อคลิกแล้วจะแสดงข้อความที่กรอกในช่องข้อความ
 ### บันทึกผลการทดลอง 
 ```html
-[บันทึกโค้ด ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ทดลอง JavaScript</title>
+</head>
+<body>
+    <!-- ปุ่มที่ 1: Inline JavaScript แสดงชื่อนักศึกษา -->
+    <button onclick="alert('นางสาว ธัญวรัตม์ ลุลอบ')">ปุ่มที่ 1</button>
+
+    <!-- ปุ่มที่ 2: Internal JavaScript แสดงวันที่ปัจจุบัน -->
+    <button id="btn2">ปุ่มที่ 2</button>
+
+    <!-- ปุ่มที่ 3: External JavaScript แสดงเวลาปัจจุบัน -->
+    <button id="btn3" onclick="showTime();">ปุ่มที่ 3</button>
+
+    <!-- ช่องกรอกข้อความ -->
+    <input type="text" id="messageInput" placeholder="กรอกข้อความ">
+    <button onclick="showMessage()">แสดงข้อความ</button>
+
+    <p id="displayMessage"></p>
+
+    <!-- Internal JavaScript -->
+    <script>
+        // ปุ่มที่ 2: แสดงวันที่ปัจจุบัน
+        document.getElementById('btn2').onclick = function() {
+            var currentDate = new Date();
+            alert('วันที่ปัจจุบัน: ' + currentDate.toLocaleDateString());
+        };
+
+        // ฟังก์ชันแสดงข้อความที่กรอก
+        function showMessage() {
+            var message = document.getElementById('messageInput').value;
+            document.getElementById('displayMessage').innerText = "ข้อความที่กรอก: " + message;
+        }
+        // ปุ่มที่ 3: แสดงเวลาปัจจุบัน
+function showTime() {
+    var currentTime = new Date();
+    alert('เวลาปัจจุบัน: ' + currentTime.toLocaleTimeString());
+}
+
+    </script>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+]
 ```
 [รูปผลการทดลองที่ 1]
+![image](https://github.com/user-attachments/assets/8aa40667-b4b3-46c8-924f-013251ebf719)
+
   
 ## การทดลองที่ 2: พื้นฐาน JavaScript
 ### 2.1 การประกาศตัวแปรและชนิดข้อมูล
