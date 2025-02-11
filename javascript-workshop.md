@@ -176,7 +176,24 @@ let person = {
 
 ### บันทึกผลการทดลอง 2.1
 ```html
-[บันทึกโค้ด ที่นี่]
+[// ประกาศตัวแปรแบบ let - สามารถเปลี่ยนแปลงค่าได้ในภายหลัง
+let studentId = "67030096";
+let studentName = "ธัญวรัตม์ ลุลอบ"; 
+let midTermScore = 75; 
+let finalTermScore = 80;
+
+// ประกาศ Object สำหรับเก็บข้อมูลนักศึกษา
+const student = {
+    studentId: "67030096",
+    name: "ธัญวรัตม์ ลุลอบ",
+    major: "เทคโนโลยีคอมพิวเตอร์",  
+    GPA: 3.25                     
+};
+
+// ตัวอย่างการใช้ข้อมูลจาก Object
+console.log(student.name);  
+console.log(student.GPA);   
+]
 ```
 [รูปผลการทดลองที่ 2.1]
 
